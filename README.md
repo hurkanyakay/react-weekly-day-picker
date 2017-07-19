@@ -1,3 +1,7 @@
+<img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/main.png" alt="React Weekly Day Picker banner" align="center" />
+
+<br />
+
 # React Weekly Day Picker
 
 This react component provides weekly view and day picker option like calendly.
@@ -48,6 +52,11 @@ You can also provide additional configuration like
 	unavailableText={"Unavailable"}  // replacing unavailable text (default: unavailable )
 />
 ```
+
+## Responsiveness and Mobil View
+When mobilView props is true, mobilView enables:
+
+<img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/smallScreen.png" alt="React Weekly Day Picker Responsiveness" align="center" />
 
 
 ## Styling and Css classes

@@ -16,7 +16,7 @@ To install this Component, run `yarn add react-weekly-day-picker` or `npm instal
 
 ## Usage
 
-To use the component, In your react Application just do
+To use the component, In your react application just do
 
 ```javascript
 	<ReactWeeklyDayPicker />
@@ -56,7 +56,7 @@ You can also provide additional configuration like
 ## Responsiveness and Mobil View
 When mobilView props is true, mobilView enables:
 
-<img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/smallScreen.png" alt="React Weekly Day Picker Responsiveness" align="center" />
+<img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/smallScreen.png" alt="React Weekly Day Picker Responsiveness" style="width:300px" align="center" />
 
 
 ## Styling and Css classes

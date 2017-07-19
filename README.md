@@ -56,7 +56,7 @@ You can also provide additional configuration like
 ## Responsiveness and Mobil View
 When mobilView props is true, mobilView enables:
 
-<img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/smallScreen.png" alt="React Weekly Day Picker Responsiveness" style="width:300px" align="center" />
+<img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/smallScreen.png" alt="React Weekly Day Picker Responsiveness" width="300px" align="center" />
 
 
 ## Styling and Css classes

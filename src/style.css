@@ -1,0 +1,178 @@
+/**
+ * React Weekly Day Picker
+ * stylesheet
+ */
+ .rwdpDayPickerContainer {
+   /*width: 100%;*/
+   display: block;
+   position: relative;
+   padding: 0 30px;
+ }
+ .rwdpDayBoxDesktop {
+
+ }
+ .rwdpDayBoxDesktop .rwdp-DayCircle-container{
+   margin-top: 40px;
+   margin-bottom: 20px;
+   border:none;
+   background: transparent;
+   cursor: pointer;
+ }
+ .rwdpDayBoxDesktop .rwdp-DayCircle {
+   border: 2px solid #4080ff;
+   width: 80px;
+   height: 80px;
+   border-radius: 40px;
+   color: #4080ff;
+   position: relative;
+ }
+ .rwdpDayBoxDesktop .rwdp-DayCircle-selected {
+   background: #4080ff;
+   color: #fff;
+ }
+ .rwdpDayBoxDesktop .rwdp-DayCircle-unavailable {
+   border-color: #a8a8a8;
+   color: #a8a8a8;
+ }
+ .rwdpDayBoxDesktop .rwdp-DayCircle-today {
+   color: #000;
+   position: absolute;
+   top: -28px;
+ }
+ .rwdpDayBoxDesktop .rwdp-DayCircle-unavailable-text {
+   position: absolute;
+   bottom: -28px;
+ }
+ .rwdpDayBoxMobil{
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle-container{
+   padding: 0;
+   border:none;
+   background: transparent;
+   cursor: pointer;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle div{
+  margin-top: 5px;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle {
+   border: 1px solid #4080ff;
+   border-bottom: none;
+   width: 100%;
+   height: 80px;
+   color: #4080ff;
+   position: relative;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle-container:last-child .rwdp-DayCircle {
+   border-bottom: 1px solid #4080ff;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle-selected {
+   background: #4080ff;
+   color: #fff;
+   border-bottom: 1px solid #fff;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle-today {
+   color: #000;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle-unavailable {
+   border-color: #a8a8a8;
+   color: #a8a8a8;
+ }
+ .rwdpDayBoxMobil .rwdp-DayCircle-container:last-child .rwdp-DayCircle-unavailable {
+   border-bottom-color: #a8a8a8;
+ }
+ .rwdpPrevWeekArrow {
+   width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+   border-right:20px solid #4080ff;
+   position: absolute;
+   top: calc(50% - 10px);
+   left: 0px;
+   cursor: pointer;
+ }
+ .rwdpNextWeekArrow {
+   width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+   border-left:20px solid #4080ff;
+   position: absolute;
+   top: calc(50% - 10px);
+   right: 0px;
+   cursor: pointer;
+ }
+
+ .rwdp-flex-box {
+       display: -webkit-box;
+       display: -moz-box;
+       display: box;
+       display: -webkit-flex;
+       display: -moz-flex;
+       display: -ms-flexbox;
+       display: flex
+  }
+  .rwdp-flex-row {
+       -webkit-box-orient: horizontal;
+       -moz-box-orient: horizontal;
+       box-orient: horizontal;
+       -webkit-flex-direction: row;
+       -moz-flex-direction: row;
+       flex-direction: row;
+       -ms-flex-direction: row
+  }
+  .rwdp-flex-column {
+       -webkit-box-orient: vertical;
+       -moz-box-orient: vertical;
+       box-orient: vertical;
+       -webkit-flex-direction: column;
+       -moz-flex-direction: column;
+       flex-direction: column;
+       -ms-flex-direction: column
+  }
+   .rwdp-justify-content-center {
+       -webkit-box-pack: center;
+       -moz-box-pack: center;
+       box-pack: center;
+       -webkit-justify-content: center;
+       -moz-justify-content: center;
+       -ms-justify-content: center;
+       -o-justify-content: center;
+       justify-content: center;
+       -ms-flex-pack: center
+   }
+   .rwdp-justify-content-space-between {
+       -webkit-box-pack: justify;
+       -moz-box-pack: justify;
+       box-pack: justify;
+       -webkit-justify-content: space-between;
+       -moz-justify-content: space-between;
+       -ms-justify-content: space-between;
+       -o-justify-content: space-between;
+       justify-content: space-between;
+       -ms-flex-pack: justify
+   }
+   .rwdp-justify-content-space-around {
+       -webkit-box-pack: center;
+       -moz-box-pack: center;
+       box-pack: center;
+       -webkit-justify-content: space-around;
+       -moz-justify-content: space-around;
+       -ms-justify-content: space-around;
+       -o-justify-content: space-around;
+       justify-content: space-around;
+       -ms-flex-pack: center
+   }
+   .rwdp-align-items-center {
+       -webkit-box-align: center;
+       -moz-box-align: center;
+       box-align: center;
+       -webkit-align-items: center;
+       -moz-align-items: center;
+       -ms-align-items: center;
+       -o-align-items: center;
+       align-items: center;
+       -ms-flex-align: center
+   }

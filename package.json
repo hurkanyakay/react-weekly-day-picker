@@ -1,0 +1,54 @@
+{
+  "name": "react-weekly-day-picker",
+  "version": "1.0.0",
+  "description": "React Weekly Day Picker",
+  "main": "lib/index.js",
+  "author": {
+    "name": "Hürkan Yakay"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack -w",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:production": "cross-env NODE_ENV=production webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Day Picker",
+    "React Day Picker",
+    "React",
+    "Date Picker",
+    "calendly"
+  ],
+  "homepage": "https://github.com/hurkanyakay/react-weekly-day-picker",
+  "repository": "https://github.com/hurkanyakay/react-weekly-day-picker.git",
+  "bugs": {
+    "url": "https://github.com/hurkanyakay/react-weekly-day-picker/issues"
+  },
+  "license": "MIT",
+  "peerDependency": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}

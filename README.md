@@ -19,7 +19,7 @@ To install this Component, run `yarn add react-weekly-day-picker` or `npm instal
 To use the component, In your react application just do
 
 ```javascript
-	<ReactWeeklyDayPicker />
+    <ReactWeeklyDayPicker />
 ```
 
 ## Props
@@ -28,28 +28,28 @@ You can also provide additional configuration like
 
 ```javascript
 <ReactWeeklyDayPicker
-	daysCount={7}  //How many days will be shown
-	classNames={}  //Overrides classnames for custom classes (below example)
-	startDay={new Date()} // First day as Date Object or 22 June 2016
-	selectedDays={['22 June 2017', new Date()]} // Selected days list
-	multipleDaySelect={true} //enables multiple day selection
-	selectDay={function(day){}}
-	unselectDay={function(day){}}
-	format={'YYYY-MM-DD'} //format of dates that handled in selectDay and unselectDay functions
-	unavailables={{
-		dates:['22 July 2017'],  //unavailable dates list
-		relative:[0,1],  //unavailable dates list relative to today (0:today, 1:tomorrow, -1:yesterday)
-		weekly: [0] //unavailable dates list for each week (0:Sunday, 1:Monday ...)
-	}}
-	mobilView={window.innerWidth < 1024}  // enables mobil view
-	beforeToday={false}   // all dates before today set as unavailable (default:true)
-	hiddens={{  // makes dates invisible
-		dates: ['22 July 2017'], //absolute dates list
-		relative: [2], // relative to today (0:today, 1:tomorrow, -1:yesterday)
-		weekly: [1]  //each week (0:Sunday, 1:Monday ...)
-	}}
-	todayText={"today"}  // replacing today text (default : - TODAY -)
-	unavailableText={"Unavailable"}  // replacing unavailable text (default: unavailable )
+    daysCount={7}  //How many days will be shown
+    classNames={}  //Overrides classnames for custom classes (below example)
+    startDay={new Date()} // First day as Date Object or 22 June 2016
+    selectedDays={['22 June 2017', new Date()]} // Selected days list
+    multipleDaySelect={true} //enables multiple day selection
+    selectDay={function(day){}}
+    unselectDay={function(day){}}
+    format={'YYYY-MM-DD'} //format of dates that handled in selectDay and unselectDay functions
+    unavailables={{
+        dates:['22 July 2017'],  //unavailable dates list
+        relative:[0,1],  //unavailable dates list relative to today (0:today, 1:tomorrow, -1:yesterday)
+        weekly: [0] //unavailable dates list for each week (0:Sunday, 1:Monday ...)
+    }}
+    mobilView={window.innerWidth < 1024}  // enables mobil view
+    beforeToday={false}   // all dates before today set as unavailable (default:true)
+    hiddens={{  // makes dates invisible
+        dates: ['22 July 2017'], //absolute dates list
+        relative: [2], // relative to today (0:today, 1:tomorrow, -1:yesterday)
+        weekly: [1]  //each week (0:Sunday, 1:Monday ...)
+    }}
+    todayText={"today"}  // replacing today text (default : - TODAY -)
+    unavailableText={"Unavailable"}  // replacing unavailable text (default: unavailable )
 />
 ```
 
@@ -65,22 +65,22 @@ classNames prop overrides existed css classes
 
 ```javascript
 render() {
-	const classNames = {
-		container : '',
-		prevWeekArrow: '',
-		nextWeekArrow: '',
-		dayBox: '',
-		dayCircleContainer: '',
-		dayCicle: '',
-		dayCircleTodayText: '',
-		dayCircleUnavailable: '',
-		dayCircleUnavailableText: '',
-		dayCicleSelected: '',
-	}
-	return (
-			<ReactWeeklyDayPicker
-				classNames={classNames}
-			/>
-	);
+  const classNames = {
+    container : '',
+        prevWeekArrow: '',
+        nextWeekArrow: '',
+        dayBox: '',
+        dayCircleContainer: '',
+        dayCicle: '',
+        dayCircleTodayText: '',
+        dayCircleUnavailable: '',
+        dayCircleUnavailableText: '',
+        dayCicleSelected: '',
+    }
+    return (
+            <ReactWeeklyDayPicker
+                classNames={classNames}
+            />
+    );
 }
 ```

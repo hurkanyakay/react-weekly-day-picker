@@ -35,6 +35,8 @@ You can also provide additional configuration like
   multipleDaySelect={true} //enables multiple day selection
   selectDay={function(day){}}
   unselectDay={function(day){}}
+  onPrevClick={function(startDay, selectedDays){}} // called with the new startDay
+  onNextClick={function(startDay, selectedDays){}} // called with the new startDay
   format={'YYYY-MM-DD'} //format of dates that handled in selectDay and unselectDay functions
   unavailables={{
     dates:['22 July 2017'],  //unavailable dates list

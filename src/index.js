@@ -105,7 +105,7 @@ class ReactWeeklyDayPicker extends React.Component {
         convertedStartDay = moment(nextProps.startDay);
       }
     }else{
-      convertedStartDay = moment();
+      convertedStartDay = this.state.startDay;
     }
     this.setState({
       selectedDays: convertedSelectedDays,
@@ -243,11 +243,19 @@ class ReactWeeklyDayPicker extends React.Component {
   prevWeek=()=>{
     this.setState({
       startDay: this.state.startDay.clone().add(-this.state.daysCount, 'days')
+    },()=>{
+      if (this.props.onPrevClick) {
+        this.props.onPrevClick(this.state.startDay, this.state.selectedDays);
+      }
     })
   }
   nextWeek=()=>{
     this.setState({
       startDay: this.state.startDay.clone().add(this.state.daysCount, 'days')
+    },()=>{
+      if (this.props.onNextClick) {
+        this.props.onNextClick(this.state.startDay, this.state.selectedDays);
+      }
     })
   }
   renderDesktopView(weekdays){

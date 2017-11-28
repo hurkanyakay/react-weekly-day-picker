@@ -242,12 +242,12 @@ class ReactWeeklyDayPicker extends React.Component {
   }
   prevWeek=()=>{
     this.setState({
-      startDay: this.state.startDay.clone().add(-7, 'days')
+      startDay: this.state.startDay.clone().add(-this.state.daysCount, 'days')
     })
   }
   nextWeek=()=>{
     this.setState({
-      startDay: this.state.startDay.clone().add(7, 'days')
+      startDay: this.state.startDay.clone().add(this.state.daysCount, 'days')
     })
   }
   renderDesktopView(weekdays){

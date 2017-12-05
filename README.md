@@ -38,6 +38,10 @@ You can also provide additional configuration like
   onPrevClick={function(startDay, selectedDays){}} // called with the new startDay
   onNextClick={function(startDay, selectedDays){}} // called with the new startDay
   format={'YYYY-MM-DD'} //format of dates that handled in selectDay and unselectDay functions
+  firstLineFormat={'ddd'} // format for the first line of the day button
+  secondLineFormat={'MMM D'} // format for the second line of the day button
+  firstLineMobileFormat={'dddd'} // format for the first line of the day button mobile
+  secondLineMobileFormat={'MMMM D, Y'} // format for the second line of the day button mobile
   unavailables={{
     dates:['22 July 2017'],  //unavailable dates list
     relative:[0,1],  //unavailable dates list relative to today (0:today, 1:tomorrow, -1:yesterday)

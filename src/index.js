@@ -157,10 +157,12 @@ class ReactWeeklyDayPicker extends React.Component {
     }else{
       if( day.isSame(this.state.selectedDays[0], 'day')){ //remove existed day
         this.convertOutputUnselect(day);
-        this.setState({
-          selectedDays: []
-        })
-        this.convertOutput([])
+        if(this.props.unselectable) {
+          this.setState({
+            selectedDays: []
+          })
+          this.convertOutput([])
+        }
       }else{
         this.setState({
           selectedDays: [day]

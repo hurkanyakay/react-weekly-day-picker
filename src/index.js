@@ -34,8 +34,9 @@ export class DayCircle extends React.Component {
     }
   }
   render(){
-    const name = this.props.mobilView ? this.props.day.format('dddd') : this.props.day.format('ddd')
-    const date = this.props.mobilView ? this.props.day.format('MMMM D, Y') : this.props.day.format('MMM D')
+    const { firstLineFormat, secondLineFormat, firstLineMobileFormat, secondLineMobileFormat } = this.props;
+    const name = this.props.mobilView ? this.props.day.format(firstLineMobileFormat || 'dddd') : this.props.day.format(firstLineFormat || 'ddd')
+    const date = this.props.mobilView ? this.props.day.format(secondLineMobileFormat || 'MMMM D, Y') : this.props.day.format(secondLineFormat || 'MMM D')
     return(
       <button
         disabled={this.props.unavailable}
@@ -259,7 +260,7 @@ class ReactWeeklyDayPicker extends React.Component {
     })
   }
   renderDesktopView(weekdays){
-    const dayComps = weekdays.map((day,i)=> <DayCircle renderClassNames={this.renderClassNames} todayText={this.props.todayText} unavailableText={this.props.unavailableText} day={day} key={i} click={this.daySelect} selected={this.checkSelectedDay(day)} unavailable={this.checkUnavailables(day)}/>)
+    const dayComps = weekdays.map((day,i)=> <DayCircle {...this.props} renderClassNames={this.renderClassNames} todayText={this.props.todayText} unavailableText={this.props.unavailableText} day={day} key={i} click={this.daySelect} selected={this.checkSelectedDay(day)} unavailable={this.checkUnavailables(day)}/>)
     return(
       <div className={this.renderClassNames('dayBox','rwdpDayBoxDesktop rwdp-flex-box rwdp-flex-row rwdp-justify-content-space-between')}>
         {dayComps}
@@ -267,7 +268,7 @@ class ReactWeeklyDayPicker extends React.Component {
     )
   }
   renderMobilView(weekdays){
-    const dayComps = weekdays.map((day,i)=> <DayCircle renderClassNames={this.renderClassNames} todayText={this.props.todayText} unavailableText={this.props.unavailableText} day={day} key={i} click={this.daySelect} selected={this.checkSelectedDay(day)} unavailable={this.checkUnavailables(day)} mobilView={true}/>)
+    const dayComps = weekdays.map((day,i)=> <DayCircle {...this.props} renderClassNames={this.renderClassNames} todayText={this.props.todayText} unavailableText={this.props.unavailableText} day={day} key={i} click={this.daySelect} selected={this.checkSelectedDay(day)} unavailable={this.checkUnavailables(day)} mobilView={true}/>)
     return(
       <div className={this.renderClassNames('dayBox','rwdpDayBoxMobil rwdp-flex-box rwdp-flex-column rwdp-justify-content-space-between')}>
         {dayComps}

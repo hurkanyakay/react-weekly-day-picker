@@ -37,6 +37,7 @@ You can also provide additional configuration like
   unselectDay={function(day){}}
   onPrevClick={function(startDay, selectedDays){}} // called with the new startDay
   onNextClick={function(startDay, selectedDays){}} // called with the new startDay
+  unselectable={false} // if true allows to unselect a date once it has been selected. Only works when multipleDaySelect={false}
   format={'YYYY-MM-DD'} //format of dates that handled in selectDay and unselectDay functions
   firstLineFormat={'ddd'} // format for the first line of the day button
   secondLineFormat={'MMM D'} // format for the second line of the day button

@@ -1,17 +1,7 @@
 {
   "name": "react-weekly-day-picker",
-  "version": "1.0.3",
   "description": "React Weekly Day Picker",
-  "main": "lib/index.js",
-  "author": {
-    "name": "Hürkan Yakay"
-  },
-  "scripts": {
-    "start": "cross-env NODE_ENV=development webpack -w",
-    "build:dev": "cross-env NODE_ENV=development webpack",
-    "build:production": "cross-env NODE_ENV=production webpack -p",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.0.3",
   "keywords": [
     "Day Picker",
     "React Day Picker",
@@ -19,36 +9,111 @@
     "Date Picker",
     "calendly"
   ],
+  "license": "MIT",
+  "main": "./dist/react-weekly-day-picker.cjs.js",
+  "module": "./dist/react-weekly-day-picker.esm.js",
+  "browser": {
+    "./dist/react-weekly-day-picker.cjs.js": "./dist/react-weekly-day-picker.cjs.browser.js",
+    "./dist/react-weekly-day-picker.esm.js": "./dist/react-weekly-day-picker.esm.browser.js"
+  },
+  "jsnext:main": "./dist/react-weekly-day-picker.esm.js",
+  "unpkg": "./dist/react-weekly-day-picker.min.js",
+  "sideEffects": false,
+  "author": {
+    "name": "Hürkan Yakay (https://hurkanyakay.com)",
+    "email": "me@hurkanyakay.com",
+    "twitter": "hurkanyakay"
+  },
+  "contributors": [],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "rollup -c",
+    "start": "cross-env BABEL_ENV=es NODE_ENV=development rollup -w -c example/rollup.config.js",
+    "docs:build": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -w example/rollup.config.js",
+    "docs:publish": "npm run docs:build && cd example && rimraf .git && git init && git commit --allow-empty -m 'update docs' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update docs' && git push git@github.com:andreypopp/react-weekly-day-picker gh-pages --force",
+    "size": "size-limit",
+    "update:size": "cross-env ROLLUP_BUILDS=browser_esm npm run build && node scripts/update-size.js && git add README.md",
+    "lint": "eslint src",
+    "lint:watch": "esw -w --fix src",
+    "preversion": "npm run lint",
+    "release:patch": "npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor && npm publish && git push --follow-tags",
+    "release:major": "npm version major && npm publish && git push --follow-tags",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "coverage": "jest --coverage",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "deploy:docs": "gh-pages -d styleguide",
+    "update-coc": "weallbehave -o ."
+  },
   "homepage": "https://github.com/hurkanyakay/react-weekly-day-picker",
   "repository": "https://github.com/hurkanyakay/react-weekly-day-picker.git",
   "bugs": {
     "url": "https://github.com/hurkanyakay/react-weekly-day-picker/issues"
   },
-  "license": "MIT",
-  "peerDependency": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+  "peerDependencies": {
+    "moment": "^2.18.1",
+    "react": ">=0.14.0 <17.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "@babel/core": "^7.1.0",
+    "@babel/helper-module-imports": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
+    "babel-core": "^7.0.0-bridge",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-macros": "^2.2.2",
+    "babel-plugin-transform-define": "^1.3.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "bytes": "^3.0.0",
     "cross-env": "^5.0.1",
-    "css-loader": "^0.28.4",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.3.0"
+    "docz": "^0.12.12",
+    "eslint": "^4.12.0",
+    "eslint-config-prometheusresearch": "^0.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-watch": "^4.0.2",
+    "gh-pages": "^2.0.1",
+    "husky": "^1.0.1",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.13.7",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-moment-proptypes": "^1.6.0",
+    "react-styleguidist": "^8.0.5",
+    "react-testing-library": "^5.2.0",
+    "react-weekly-day-picker": "^1.0.3",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.66.2",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-css-only": "^0.4.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "rollup-plugin-visualizer": "^0.9.2",
+    "size-limit": "^0.20.0",
+    "styled-components": "^4.1.1",
+    "terser": "^3.7.6",
+    "webpack": "^4.26.0"
   },
   "dependencies": {
-    "moment": "^2.18.1"
-  }
+    "prop-types": "^15.6.2"
+  },
+  "engines": {
+    "node": ">=6.14.4",
+    "npm": ">=3.10.10"
+  },
+  "style": "dist/styles.css",
+  "files": [
+    "dist"
+  ]
 }

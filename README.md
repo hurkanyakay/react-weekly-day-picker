@@ -8,18 +8,18 @@ This react component provides weekly view and day picker option like calendly.
 
 This component makes use of moment.js.
 
+<span class="weight">1.63KB</span> (minified & gzipped).
 
 ## Installation
 
 To install this Component, run `yarn add react-weekly-day-picker` or `npm install react-weekly-day-picker`.
-
 
 ## Usage
 
 To use the component, In your react application just do
 
 ```javascript
-  <ReactWeeklyDayPicker />
+<ReactWeeklyDayPicker />
 ```
 
 ## Props
@@ -61,10 +61,10 @@ You can also provide additional configuration like
 ```
 
 ## Responsiveness and Mobil View
+
 When mobilView props is true, mobilView enables:
 
 <img src="https://raw.githubusercontent.com/hurkanyakay/react-weekly-day-picker/master/imgs/smallScreen.png" alt="React Weekly Day Picker Responsiveness" width="300px" align="center" />
-
 
 ## Styling and Css classes
 

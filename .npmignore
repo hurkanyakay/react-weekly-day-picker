@@ -2,7 +2,8 @@
 node_modules
 src
 .DS_Store
-webpack.config.js
-.babelrc
-.gitignore
+*.log
+dist
+coverage
 yarn.lock
+package-lock.json

@@ -81,7 +81,7 @@ render() {
     dayCircleTodayText: '',
     dayCircleUnavailable: '',
     dayCircleUnavailableText: '',
-    dayCicleSelected: '',
+    dayCircleSelected: '',
   }
   return (
     <ReactWeeklyDayPicker
